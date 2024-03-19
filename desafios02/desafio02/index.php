@@ -10,7 +10,7 @@
     <?php 
     $sal = $_GET['salario']??1380;
     $salMinimo = 1380;
-    $numSalarios = $sal/$salMinimo;
+    $numSalarios = floor($sal/$salMinimo);
     $restoSal = $sal%$salMinimo; 
     
 
