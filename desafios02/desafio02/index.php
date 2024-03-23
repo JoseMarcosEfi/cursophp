@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php 
-    $sal = $_GET['salario']??1380;
+    $sal = $_GET['salario']??$salMinimo;
     $salMinimo = 1380;
     $numSalarios = floor($sal/$salMinimo);
     $restoSal = $sal%$salMinimo; 
@@ -19,7 +19,7 @@
         <h1>Informe seu Salário</h1>
         <form action="<?= $_SERVER['PHP_SELF']?>" method="get">
         <label for="salario">Salário(R$)</label>
-        <input type="number" name="salario" id="salario" step="0.01">
+        <input type="number" name="salario" id="salario" step="0.01" value="<?=$sal?>">
         <p>Considerando o salário mínimo de <strong>R$ 1.380,00</strong></p>
         <input type="submit" value="Calcular">
     </form>
