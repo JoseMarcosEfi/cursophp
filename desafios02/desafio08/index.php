@@ -47,23 +47,6 @@
         </ul>
     </section>
 
-    <script>
-        document.getElementById('saque').addEventListener('input', function(){
-            //obtem o valor do input
-            let value = this.value;
-            //remove qualquer não digito
-            value = value.replace(/[^\d]g, '');
-
-            //verifica se o valor termina em 0 ou 5
-            if(value != '' && (value.slice(-1) != '0' && value.slice(-1) != '5')){
-                //SE NAO TERMINAR EM 0 OU 5, EXIBE UMA MENSAGEM DE ERRO
-                this.setCustomValidity('Número inválido!')
-            }else{
-                //SE TERMINAR EM 0 OU 5, EXIBE UMA MENSAGEM DE SUCESSO
-                this.setCustomValidity('');
-            }
-        });
-    </script>
 <body>
 
 </body>
